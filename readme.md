@@ -20,7 +20,7 @@ print(yinglish.chs2yin(s))
 def chs2yin(s, 淫乱度=0.5):
 ```
 
-s是原字符串，淫乱度是0~1的实数，越大越淫乱。
+s是原字符串，淫乱度是0~1的实数，越大越淫乱，表示每个词语被转化的概率。
 
 
 ## 安装
@@ -34,4 +34,4 @@ pip install git+https://github.com/RimoChan/yinglish.git
 
 ## 结束
 
-就这样，大家88(溜了溜了)。
+就这样，大家88<sub>(溜了溜了)</sub>。
