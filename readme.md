@@ -2,7 +2,7 @@
 
 能把中文翻译成淫语的翻译机！
 
-<sub>(其实灵感是来自北京地铁站2333)</sub>
+<sub>(其实灵感是来自北京地铁站，那个写站名的告示牌真的好色啊2333)</sub>
 
 
 ## 样例
@@ -27,11 +27,14 @@ s是原字符串，淫乱度是0~1的实数，越大越淫乱，表示每个词�
 
 ## 安装
 
+首先，你需要安装一个Python(3.6以上版本)。
+
+然后——
 ```bash 
 pip install git+https://github.com/RimoChan/yinglish.git
 ```
 
-然后import就行了。
+最后`import yinglish`就行了。
 
 
 ## 结束
