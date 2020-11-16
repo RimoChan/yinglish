@@ -13,6 +13,10 @@ import yinglish
 s = '不行，那里不行。'
 print(yinglish.chs2yin(s))
 # 不行，那……那里不行……
+
+s2 = '吃葡萄不吐葡萄皮。'
+print(yinglish.chs2yin(s2))
+# ……吃〇〇不吐葡……葡萄皮……
 ```
 
 
