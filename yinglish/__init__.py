@@ -1,7 +1,7 @@
 import random
 
 import jieba
-import jieba.posseg as np # 惊！？
+import jieba.posseg as pseg
 jieba.setLogLevel(20)
 
 
@@ -14,12 +14,12 @@ def _词转换(x, y, 淫乱度):
         return f'{x[0]}……{x}'
     else:
         if y == 'n' and random.random() < 0.5:
-            x = ''.join(['〇' for _ in x])
+            x = '〇' * len(x)
         return f'……{x}'
 
 
 def chs2yin(s, 淫乱度=0.5):
-    return ''.join([_词转换(x, y, 淫乱度) for x, y in np.cut(s)])
+    return ''.join([_词转换(x, y, 淫乱度) for x, y in pseg.cut(s)])
 
 
 if __name__ == '__main__':
