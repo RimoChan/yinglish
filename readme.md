@@ -1,6 +1,6 @@
 # 淫语翻译机！
 
-能把中文翻译成淫语的翻译机！
+能把中文和英文翻译成淫语的翻译机！
 
 <sub>(其实灵感是来自北京地铁站，那个写站名的告示牌真的好色啊2333)</sub>
 
@@ -17,6 +17,10 @@ print(yinglish.chs2yin(s))
 s2 = '吃葡萄不吐葡萄皮。'
 print(yinglish.chs2yin(s2))
 # ……吃〇〇不吐葡……葡萄皮……
+
+s3 = 'Although games are great, but I like your cooking better.'
+print(yinglish.eng2yin(s3))
+# A...Although g...games...are great..., b...but...I like your...〇〇〇〇 b...better...
 ```
 
 
@@ -27,6 +31,12 @@ def chs2yin(s, 淫乱度=0.5):
 ```
 
 s是原字符串，淫乱度是0~1的实数，越大越淫乱，表示每个词语被转化的概率。
+
+```python
+def eng2yin(s, yinluanity=0.5):
+```
+
+s是原字符串，yinluanity是0~1的实数，越大越淫乱，表示每个词语被转化的概率。
 
 
 ## 安装

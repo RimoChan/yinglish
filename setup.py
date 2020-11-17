@@ -19,5 +19,7 @@ setuptools.setup(
     ],
     install_requires=[
         'jieba>=0.42.1',
+        'spacy>=2.3.0,<2.4.0',
+        'https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.0/en_core_web_sm-2.3.0.tar.gz'
     ],
 )
