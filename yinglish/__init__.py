@@ -5,7 +5,7 @@ import jieba.posseg as pseg
 jieba.setLogLevel(20)
 
 import spacy
-nlp = spacy.load("en_core_web_sm")
+_nlp = spacy.load("en_core_web_sm")
 
 
 def _词转换(x, y, 淫乱度):
@@ -34,8 +34,8 @@ def _word_convert(x, y, yinluanity):
         return f'...{x}'
 
 
-def en_pseg(s):
-    doc = nlp(s)
+def _en_pseg(s):
+    doc = _nlp(s)
     return [(str(token), token.pos_) for token in doc]
 
 
@@ -44,7 +44,7 @@ def chs2yin(s, 淫乱度=0.5):
 
 
 def eng2yin(s, yinluanity=0.5):
-    result = ' '.join([_word_convert(x, y, yinluanity) for x, y in en_pseg(s)])
+    result = ' '.join([_word_convert(x, y, yinluanity) for x, y in _en_pseg(s)])
     result = result.replace(' .', '.').replace('....', '...')
     return result
 
