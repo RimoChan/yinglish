@@ -24,7 +24,7 @@ def _词转换(x, y, 淫乱度):
 def _word_convert(x, y, yinluanity):
     if random.random() > yinluanity:
         return x
-    if x in {', ', '. '}:
+    if x in {',', '.'}:
         return '...'
     if len(x) > 1 and random.random() < 0.5:
         return f'{x[0]}...{x}'
@@ -43,9 +43,18 @@ def chs2yin(s, 淫乱度=0.5):
     return ''.join([_词转换(x, y, 淫乱度) for x, y in pseg.cut(s)])
 
 
+_replacements = {
+    ' .': '.',
+    ' ,': ', ',
+    '....': '...',
+    '.....': '......'
+    '  ': ' ',
+    ',.': ', .'
+}
 def eng2yin(s, yinluanity=0.5):
     result = ' '.join([_word_convert(x, y, yinluanity) for x, y in _en_pseg(s)])
-    result = result.replace(' .', '.').replace('....', '...')
+    for replacement in _replacements:
+        result = result.replace(replacement, _replacements[replacement])
     return result
 
 if __name__ == '__main__':
