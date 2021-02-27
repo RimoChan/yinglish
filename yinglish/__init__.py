@@ -10,6 +10,8 @@ def _词转换(x, y, 淫乱度):
         return x
     if x in {'，', '。'}:
         return '……'
+    if x in {'!', '！'}:
+        return '❤'
     if len(x) > 1 and random.random() < 0.5:
         return f'{x[0]}……{x}'
     else:
