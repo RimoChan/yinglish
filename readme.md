@@ -35,7 +35,7 @@ s是原字符串，淫乱度是0~1的实数，越大越淫乱，表示每个词�
 
 然后——
 ```bash 
-pip install git+https://github.com/RimoChan/yinglish.git
+pip install yinglish
 ```
 
 最后`import yinglish`就行了。
