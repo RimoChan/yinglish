@@ -17,6 +17,11 @@ print(yinglish.chs2yin(s))
 s2 = '吃葡萄不吐葡萄皮。'
 print(yinglish.chs2yin(s2))
 # ……吃〇〇不吐葡……葡萄皮……
+
+# 新增功能
+s3 = '不行，那里不行。'
+print(yinglish.convert_to_yinglish(s))
+# 不垳………!!!♡♡♡!!!!!，…!!!那裏不垳!!!♥♥♥。
 ```
 
 
@@ -24,6 +29,9 @@ print(yinglish.chs2yin(s2))
 
 ```python
 def chs2yin(s, 淫乱度=0.5):
+```
+```python
+def convert_to_yinglish(s:str, degree = 1)->str:
 ```
 
 s是原字符串，淫乱度是0~1的实数，越大越淫乱，表示每个词语被转化的概率。
